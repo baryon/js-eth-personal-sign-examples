@@ -5,7 +5,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-    <title><%= htmlWebpackPlugin.options.productName %></title>
+    <title>Web3 Provider Test for Signing Message</title>
 <style>
   button {
     width: 250px;
@@ -16,28 +16,24 @@
 </style>
   </head>
   <body>
-    <noscript>
-      This is your fallback content in case JavaScript fails to load.
-    </noscript>
 
-    <!-- DO NOT touch the following <div> -->
-    <div id="q-app">
+    <button id="ethSignButton">eth_sign</button>
+    <button id="personalSignButton">personal_sign</button>
+    <button id="personalRecoverTest">personal_ecRecover</button>
+    <button id="ethjsPersonalSignButton">ethjs personal sign</button>
+    <button id="signTypedDataV3Button">sign typed data</button>
+    <button id="signTypedDataButton">LEGACY sign typed data</button>
+    <button id="ethjsSignTypedDataButton">LEGACY sign typed data with ethjs</button>
 
-      <button id="ethSignButton">eth_sign</button>
-      <button id="personalSignButton">personal_sign</button>
-      <button id="personalRecoverTest">personal_ecRecover</button>
-      <button id="ethjsPersonalSignButton">ethjs personal sign</button>
-      <button id="signTypedDataButton">sign typed data</button>
-      <button id="ethjsSignTypedDataButton">sign typed data with ethjs</button>
-  
-      <br>
-      <a href="https://github.com/danfinlay/js-eth-personal-sign-examples">View the source code on Github</a>
-  
-
+    <br>
+    <a href="https://github.com/baryon/js-eth-personal-sign-examples">View the source code on Github</a>
+    <br />
+    <div id="console-log">
+      <p>console.log</p>
     </div>
-
-    <!-- built files will be auto injected here -->
-  <script src="bundle.js"></script>
-
   </body>
+
+  <!-- <script src="./index.js"></script> -->
+  <script src="./bundle.js"></script>
+
 </html>
