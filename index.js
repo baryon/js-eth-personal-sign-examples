@@ -321,7 +321,7 @@ signTypedDataV3Button.addEventListener('click', function(event) {
     if (result.error) return console.error(result)
     console.log('eth_signTypedData_v3 SIGNED:' + JSON.stringify(result.result))
 
-    const recovered = sigUtil.recoverTypedSignature({ data: msgParams, sig: result.result })
+    const recovered = sigUtil.recoverTypedSignature({ data: typedData, sig: result.result })
 
     if (recovered === from ) {
       console.log('Successfully ecRecovered signer as ' + from)
